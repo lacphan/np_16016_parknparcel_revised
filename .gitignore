@@ -57,5 +57,3 @@ common/config/params-local.php
 environment.php
 frontend/config/main-local.php
 frontend/config/params-local.php
-frontend/web/index-test.php
-frontend/web/index.php
