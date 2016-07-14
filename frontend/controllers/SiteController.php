@@ -16,7 +16,7 @@ use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
-
+use frontend\models\ParkerRegisterForm;
 /**
  * Site controller
  */
@@ -133,18 +133,17 @@ class SiteController extends Controller
      *
      * @return mixed
      */
-    public function actionRegister()
+    public function actionParkerRegister()
     {
-        $model = new RegisterForm();
-        if(Yii::$app->session->hasFlash('userEmail')) {
-            $model->email = Yii::$app->session->getFlash('userEmail');
-        }
+        $model = new ParkerRegisterForm();
+
         if ($model->load(Yii::$app->request->post())) {
-            if ($user = $model->register()) {
+            if ($model->register()) {
                 return $this->render('success');
             }
         }
-        return $this->render('register', [
+
+        return $this->render('parker-register', [
             'model' => $model,
         ]);
     }

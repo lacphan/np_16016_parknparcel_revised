@@ -18,17 +18,14 @@ class AppAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'themes/default/css/site.css',
-        '//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700italic,700,800,800italic',
+        '//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700',
+        '//fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic&subset=latin,latin-ext',
+        '//fonts.googleapis.com/css?family=Cabin',
         'themes/default/css/bootstrap_base.css',
         'themes/default/css/fonts.css',
-        'themes/default/libs/jquery-ui/jquery-ui.min.css',
-        'themes/default/libs/timepicker/jquery.timepicker.css',
         'themes/default/css/main.css',
     ];
     public $js = [
-        'themes/default/libs/jquery-ui/jquery-ui.min.js',
-        'themes/default/libs/timepicker/jquery.timepicker.min.js',
         'themes/default/js/main.js'
     ];
     public $depends = [

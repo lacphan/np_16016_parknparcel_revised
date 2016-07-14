@@ -26,7 +26,7 @@ class SearchUser extends User
     public function rules()
     {
         return [
-            [['id', 'profile_id', 'parent_id', 'level', 'status', 'building_id', 'creator_id', 'is_deleted', 'is_enabled', 'ordering_weight'], 'integer'],
+            [['id', 'profile_id', 'parent_id', 'level', 'status', 'creator_id', 'is_deleted', 'is_enabled', 'ordering_weight'], 'integer'],
             [['username', 'email', 'first_name', 'last_name', 'password_hash', 'password_reset_token', 'auth_key', 'created_at', 'updated_at', 'published_at', 'params'], 'safe'],
             [['globalSearch'],'safe'],
         ];
@@ -70,7 +70,6 @@ class SearchUser extends User
             'parent_id' => $this->parent_id,
             'level' => $this->level,
             'status' => $this->status,
-            'building_id' => $this->building_id,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
             'published_at' => $this->published_at,
@@ -101,7 +100,6 @@ class SearchUser extends User
         $query->orFilterWhere(['like','password_reset_token', $this->globalSearch]);
         $query->orFilterWhere(['like','auth_key', $this->globalSearch]);
         $query->orFilterWhere(['like','status', $this->globalSearch]);
-        $query->orFilterWhere(['like','building_id', $this->globalSearch]);
         $query->orFilterWhere(['like','created_at', $this->globalSearch]);
         $query->orFilterWhere(['like','updated_at', $this->globalSearch]);
         $query->orFilterWhere(['like','published_at', $this->globalSearch]);

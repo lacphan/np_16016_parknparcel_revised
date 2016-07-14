@@ -9,12 +9,15 @@
 namespace common\enpii\components;
 
 use \yii\web\Application;
+
+
 /**
  * Class NpWebApplication
 
  * @property NpWebUser $npUser The user component. This property is read-only.
  * @property \yii\image\ImageDriver $image
  * @property $uploadDir
+ * @property \yii\web\UrlManager $uploadUrl
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @since 2.0
  */

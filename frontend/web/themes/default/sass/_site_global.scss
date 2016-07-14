@@ -1,0 +1,17 @@
+.navbar-collapse {
+  box-shadow: none;
+}
+
+.site-header .main-navigation .menu.nav {
+  @include respond-to-custom-size(null, 1023px) {
+    box-shadow: none;
+  }
+}
+body{
+  font-family: "Source Sans Pro";
+}
+.success{
+  color: green;
+  text-align: center;
+}
+

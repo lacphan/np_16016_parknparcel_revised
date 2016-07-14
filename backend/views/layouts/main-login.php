@@ -46,15 +46,13 @@ $this->beginPage() ?><!DOCTYPE html>
 <?php $this->beginBody() ?>
 
 <!-- BEGIN LOGO -->
-<div class="logo">
 
-    <img src="<?= Yii::$app->urlManager->baseUrl . '/themes/default/images/bic-logo.png'?>" alt=""/>
-</div>
 <!-- END LOGO -->
 <!-- BEGIN LOGIN -->
 
 <div class="wrap">
     <div class="container">
+        
         <?= Alert::widget() ?>
         <?= $content ?>
     </div>

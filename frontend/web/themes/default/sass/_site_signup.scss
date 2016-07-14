@@ -1,0 +1,347 @@
+.tmp-signup {
+  font-family: "Source Sans Pro";
+  .signup-title {
+    color: #363636;
+    margin-top: 26px;
+    font-family: "Source Sans Pro";
+    @include rem-fallback('font-size', 4.4);
+    @include rem-fallback('line-height', 4.4);
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .signup-form {
+    margin-top: 55px;
+    padding: 45px 25px 40px;
+    background: #f7f7f7;
+    .form-left {
+      width: 49%;
+      float: left;
+      padding: 0 35px;
+      @include respond-to-custom-size(null, 992px) {
+        float: none;
+        width: 100%;
+      }
+      @include respond-to-custom-size(null, 768px) {
+        padding: 0;
+      }
+    }
+    .form-right {
+      float: right;
+      width: 51%;
+      padding: 0 45px 0 39px;
+      @include respond-to-custom-size(null, 992px) {
+        float: none;
+        width: 100%;
+        padding: 0 35px;
+        margin-top: 40px;
+      }
+      @include respond-to-custom-size(null, 768px) {
+        padding: 0;
+      }
+    }
+    .form-title {
+      color: #363636;
+      font-weight: 600;
+      @include rem-fallback('font-size', 2.7);
+      @include rem-fallback('line-height', 2.7);
+      text-transform: uppercase;
+      margin-bottom: 19px;
+    }
+    .parker-collection {
+      padding-top: 39px;
+      margin-top: 29px;
+      border-top: solid 1px #e0e0e0;
+    }
+    .form-row {
+      margin-bottom: 0;
+      label {
+        font-weight: 600;
+        color: #666666;
+        @include rem-fallback('font-size', 1.5);
+        @include rem-fallback('line-height', 2.7);
+        display: block;
+        margin: 0;
+        text-transform: uppercase;
+      }
+      i {
+        font-style: normal;
+        color: red;
+
+      }
+      .required {
+        label {
+          &:after {
+            content: ' *';
+            color: red;
+          }
+        }
+      }
+      input, select {
+        width: 100%;
+        height: 35px;
+        border: solid 1px #e0e0e0;
+        border-radius: 0;
+        padding-left: 10px;
+        color: #666666;
+        background: #ffffff;
+        &:focus {
+          outline: none;
+        }
+      }
+      input[type=radio] {
+        width: 16px;
+        height: 16px;
+        margin-top: 3px;
+        margin-right: 10px;
+        display: inline-block;
+        float: left;
+      }
+      .collection-day {
+        margin-top: 15px;
+        margin-bottom: 47px;
+        p {
+          margin-bottom: 14px
+        }
+      }
+      span {
+        display: inline-block;
+      }
+      select {
+        background: #fff url("../img/dropdown-icon.png") no-repeat;
+        background-size: 10px 6px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-position: right 10px center;
+      }
+      .form-radio {
+        input {
+          margin-top: 0;
+        }
+        label {
+          margin-bottom: 10px;
+          text-transform: none;
+          font-weight: 400;
+          line-height: 18px;
+          &:after {
+            display: none;
+          }
+        }
+      }
+      .note {
+        color: #666666;
+        @include rem-fallback('font-size', 1.5);
+        @include rem-fallback('line-height', 2.5);
+      }
+      .collection-time {
+        margin-top: 8px;
+        .form-group {
+          width: 140px;
+          margin-right: 35px;
+          display: inline-block;
+          vertical-align: top;
+        }
+
+        label {
+          display: inline-block;
+          margin-right: 10px;
+          text-transform: capitalize;
+          vertical-align: top;
+        }
+        select {
+          width: 80px;
+          margin-right: 0;
+          display: inline-block;
+          vertical-align: top;
+          @include respond-to-custom-size(null, 768px) {
+            margin-right: 2px;
+          }
+
+        }
+      }
+      .file-upload-wrapper {
+        position: relative;
+        padding-right: 80px;
+        margin-top: 15px;
+      }
+      .file-upload-button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 80px;
+        height: 35px;
+        background: #e0e0e0;
+        color: #898989;
+        @include rem-fallback('font-size', 1.5);
+        @include rem-fallback('line-height', 1.5);
+        border: none;
+      }
+
+    }
+    .submit-button {
+      margin-top: 40px;
+      @include respond-to-custom-size(null, 480px) {
+        text-align: center;
+      }
+      input,button {
+        background: #8cc63f;
+        font-weight: 600;
+        @include rem-fallback('font-size', 1.5);
+        @include rem-fallback('line-height', 1.5);
+        width: 167px;
+        height: 45px;
+        border: none;
+        border-radius: 5px;
+        color: #ffffff;
+        &.user {
+          background: #008eaa;
+        }
+        @include respond-to-custom-size(null, 480px) {
+          width: 210px;
+        }
+      }
+      .css-fbl.js-fbl {
+        width: 210px;
+        float: right;
+        margin: 0;
+        @include respond-to-custom-size(null, 480px) {
+          float: none;
+          margin: 20px auto 0
+        }
+      }
+    }
+  }
+}
+
+.block-tab {
+  margin-top: 80px;
+  .tab-control {
+    button {
+      border: none;
+      width: 260px;
+      height: 60px;
+      background: #f1f1f1;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #363636;
+      border-radius: 5px 5px 0 0;
+      @include rem-fallback('font-size', 2.1);
+      @include rem-fallback('line-height', 2.1);
+      @include respond-to-custom-size(null, 768px){
+        width: 140px;
+        @include rem-fallback('font-size', 1.4);
+        @include rem-fallback('line-height', 1.4);
+      }
+      &.item-0 {
+        margin-right: 20px;
+        @include respond-to-custom-size(null, 768px){
+          margin-right: 5px;
+        }
+        &.active {
+          background: #008eaa;
+        }
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+    button.active {
+      background: #008eaa;
+      color: #ffffff;
+
+    }
+  }
+  #tab-content {
+    background: #008eaa;
+    padding: 75px 0;
+  }
+  .tab-content {
+    background: #008eaa;
+    padding: 116px 0;
+    position: relative;
+    z-index: 9;
+    margin-top: -8px;
+
+    .tab-item {
+      display: none;
+      &.active {
+        display: block;
+      }
+      .sub-item {
+        text-align: center;
+        padding: 0 18px;
+        .icon {
+          min-height: 120px;
+          margin-top: 24px;
+        }
+        .name {
+          margin-top: 21px;
+          font-weight: 600;
+          @include rem-fallback('font-size', 2.7);
+          @include rem-fallback('line-height', 2.7);
+          color: #ffffff;
+        }
+        .intro {
+          margin-top: 9px;
+          @include rem-fallback('font-size', 1.5);
+          @include rem-fallback('line-height', 2.7);
+          color: #ffffff;
+          font-weight: 400;
+        }
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  .button-learn {
+    text-align: center;
+    margin-top: 78px;
+    a {
+      display: inline-block;
+      padding: 13px 24px;
+      color: #ffffff;
+      background: #047186;
+      border-radius: 5px;
+      font-weight: 600;
+      &:hover, &:focus {
+        text-decoration: none;
+      }
+    }
+  }
+  &.parker {
+    .tab-content {
+      background-color: #8cc63f;
+      .button-learn {
+        text-align: center;
+        margin-top: 78px;
+        a {
+          display: inline-block;
+          padding: 13px 24px;
+          color: #ffffff;
+          background: #6cae15;
+          border-radius: 5px;
+          font-weight: 600;
+          &:hover, &:focus {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    .tab-control {
+      button.active {
+        background: #8cc63f;
+      }
+    }
+  }
+}
+
+.error {
+  margin-top: 9px;
+  @include rem-fallback('font-size', 1.5);
+  @include rem-fallback('line-height', 2.7);
+  color: red;
+  font-weight: 400;
+}

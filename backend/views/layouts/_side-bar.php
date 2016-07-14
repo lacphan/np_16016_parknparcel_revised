@@ -43,16 +43,10 @@
                         <span class="title">User Management</span>
                     </a>
                 </li>
-                <li class="nav-item <?= Yii::$app->controller->id == 'contest-item' ? 'active' : '' ?>">
-                    <a href="<?= Yii::$app->urlManager->createUrl(['contest-item']) ?>" class="nav-link ">
+                <li class="nav-item <?= Yii::$app->controller->id == 'parker-item' ? 'active' : '' ?>">
+                    <a href="<?= Yii::$app->urlManager->createUrl(['parker-item']) ?>" class="nav-link ">
                         <i class="menu-icon menu-icon-user"></i>
-                        <span class="title">Contest Item Management</span>
-                    </a>
-                </li>
-                <li class="nav-item <?= Yii::$app->controller->id == 'contest-session' ? 'active' : '' ?>">
-                    <a href="<?= Yii::$app->urlManager->createUrl(['contest-session']) ?>" class="nav-link ">
-                        <i class="menu-icon menu-icon-user"></i>
-                        <span class="title">Contest Session Management</span>
+                        <span class="title">Parker Management</span>
                     </a>
                 </li>
             <?php endif; ?>

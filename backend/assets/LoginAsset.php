@@ -28,7 +28,7 @@ class LoginAsset extends NpAssetBundle
         'assets-enpii/global/css/components-md.min.css',
         'assets-enpii/global/css/plugins-md.min.css',
         'assets-enpii/pages/css/login-4.min.css',
-        'css/login.css',
+        'themes/default/css/login.css',
     ];
     public $js = [
         'assets-enpii/global/plugins/respond.min.js',

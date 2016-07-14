@@ -1,0 +1,20 @@
+$color-header-bg: #b84541;
+$header-height: 114px;
+$sidebar-menu-width: 363px;
+$sidebar-width-on-close : 104px;
+$site-bg-color: #3a3939;
+$color-green: #86c440;
+$color-green-hover: #73ad36;
+$color-blue: #008eaa;
+
+body {
+  font-family: "Open Sans",sans-serif;
+  background-color: $site-bg-color;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.page-content-wrapper .page-content {
+  //margin-left: $sidebar-menu-width;
+}

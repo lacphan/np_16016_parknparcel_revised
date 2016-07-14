@@ -44,7 +44,7 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules'=>[
-
+                '/<slug:\w[\w\-]+>/' => 'page/show-single',
             ]
         ],
         'reCaptcha' => [

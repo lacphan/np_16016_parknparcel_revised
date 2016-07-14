@@ -14,7 +14,7 @@ return [
             'username' => 'root',
             'password' => 'mysql',
             'charset' => 'utf8',
-            'tablePrefix' => 'bic_ffyw_'
+            'tablePrefix' => 'parknparcel_'
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
@@ -23,6 +23,12 @@ return [
             // 'useFileTransport' to false and configure a transport
             // for the mailer to send real emails.
             'useFileTransport' => true,
+        ],
+        'uploadUrl' => [
+            'class' => 'yii\web\UrlManager',
+            'baseUrl' => '/uploads',
+            'enablePrettyUrl' => true,
+            'showScriptName' => false,
         ],
     ],
 ];

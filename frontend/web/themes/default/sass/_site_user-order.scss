@@ -1,0 +1,241 @@
+.tmp-user-order {
+  font-family: "Source Sans Pro";
+  padding-bottom: 52px;
+  .order-left {
+    float: left;
+    width: 50%;
+    margin-top: 35px;
+    padding-right: 30px;
+    @include respond-to-custom-size(null, 768px) {
+      padding-right: 0;
+      float: none;
+      width: 100%;
+    }
+    .left-pan {
+      background: #f7f7f7;
+      padding: 45px 33px 30px;
+      @include respond-to-custom-size(null, 992px) {
+        padding: 40px 20px;
+      }
+      @include respond-to-custom-size(null, 768px) {
+
+      }
+      .title {
+        color: #333333;
+        @include rem-fallback('font-size', 2.7);
+        @include rem-fallback('line-height', 2.7);
+      }
+      .parker-item {
+        margin-top: 18px;
+        padding: 28px;
+        background: #ffffff;
+        .item-left {
+          float: left;
+          width: 33%;
+          padding-right: 23px;
+          img {
+            width: 100%;
+            height: auto;
+          }
+
+        }
+        .item-right {
+          float: left;
+          width: 67%;
+          .star {
+            color: #666666;
+            @include rem-fallback('font-size', 1.5);
+            @include rem-fallback('line-height', 2.7);
+            i {
+              margin-right: 5px;
+              color: #f1c40f;
+            }
+            span{
+              margin-left: 10px;
+            }
+          }
+          .name {
+            color: #333333;
+            font-weight: bold;
+            @include rem-fallback('font-size', 1.5);
+            @include rem-fallback('line-height', 2.7);
+            margin-top: 2px;
+          }
+          .address {
+            color: #666666;
+            @include rem-fallback('font-size', 1.5);
+            @include rem-fallback('line-height', 2.7);
+          }
+        }
+        .collection {
+          color: #666666;
+          @include rem-fallback('font-size', 1.5);
+          @include rem-fallback('line-height', 2.7);
+        }
+        .collection-day {
+          margin-top: 10px;
+
+        }
+      }
+    }
+    .review-title {
+      font-weight: 600;
+      color: #333333;
+      @include rem-fallback('font-size', 1.7);
+      @include rem-fallback('line-height', 2.7);
+      text-transform: uppercase;
+      margin-top: 23px;
+    }
+    .list-review {
+      margin-top: 6px;
+      height: 360px;
+      overflow-y: auto;
+      .review-item {
+        padding: 20px 30px 22px;
+        background: #ffffff;
+        margin-top: 1px;
+        &:first-child {
+          margin-top: 0;
+        }
+        .name {
+          color: #333333;
+          font-weight: 600;
+          @include rem-fallback('font-size', 1.4);
+          @include rem-fallback('line-height', 1.8);
+          span {
+            margin-right: 10px;
+          }
+          i {
+            color: #f1c40f;
+            margin-right: 2px;
+          }
+        }
+        .review {
+          margin-top: 10px;
+          color: #666666;
+          @include rem-fallback('font-size', 1.4);
+          @include rem-fallback('line-height', 2.1);
+        }
+      }
+    }
+    .bottom-line {
+      margin-top: 14px;
+      padding: 0 30px;
+      .line {
+        background: #efefef;
+        height: 1px;
+      }
+    }
+  }
+  .order-right {
+    float: right;
+    width: 50%;
+    margin-top: 35px;
+    padding: 45px 70px 40px 31px;
+    background: #f7f7f7;
+
+    @include respond-to-custom-size(1281px, null) {
+      .row {
+        margin: 0 -27px;
+      }
+      .col-sm-6 {
+        padding: 0 27px;
+      }
+    }
+    @include respond-to-custom-size(null, 992px) {
+      padding: 40px 20px;
+    }
+    @include respond-to-custom-size(null, 768px){
+      float: none;
+      width: 100%;
+    }
+    .title {
+      color: #333333;
+      @include rem-fallback('font-size', 2.7);
+      @include rem-fallback('line-height', 2.7);
+      text-transform: uppercase;
+    }
+    .form-content {
+      margin-top: 19px;
+      label {
+        color: #666666;
+        font-weight: 600;
+        @include rem-fallback('font-size', 1.5);
+        @include rem-fallback('line-height', 2.7);
+        display: block;
+        text-transform: uppercase;
+        margin-bottom: 2px;
+      }
+      input {
+        width: 100%;
+        height: 35px;
+        border: solid 1px #e0e0e0;
+        padding-left: 10px;
+      }
+      textarea {
+        width: 100%;
+        height: 80px;
+        border: solid 1px #e0e0e0;
+        padding-left: 10px;
+      }
+      input[type=checkbox] {
+        width: 16px;
+        height: 16px;
+        margin-top: 3px;
+        margin-right: 10px;
+        display: inline-block;
+        float: left;
+        position: absolute;
+        left: 0;
+        top: 4px;
+      }
+      span {
+        display: inline-block;
+        margin-left: 30px;
+        color: #666666;
+        @include rem-fallback('font-size', 1.5);
+        @include rem-fallback('line-height', 2.3);
+      }
+      select {
+        background: #fff url("../img/dropdown-icon.png") no-repeat;
+        background-size: 10px 6px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-position: right 10px center;
+        width: 100%;
+        height: 35px;
+        border: solid 1px #e0e0e0;
+        padding-left: 10px;
+        color: #666666;
+        border-radius: 0;
+        margin: 8px 0 0 5px;
+      }
+      input[type=submit] {
+        color: #ffffff;
+        background: #8cc63f;
+        border: none;
+        border-radius: 5px;
+        font-weight: 600;
+        width: 127px;
+        height: 45px;
+        margin-left: 1px;
+      }
+      .submit-button {
+        padding-top: 14px;
+      }
+      .form-row {
+        margin-bottom: 15px;
+        position: relative;
+        &.row-vendor {
+          margin-top: 23px;
+          margin-bottom: 27px;
+        }
+        &.row-payment {
+          padding-top: 9px;
+          margin-bottom: 48px;
+        }
+      }
+    }
+  }
+}

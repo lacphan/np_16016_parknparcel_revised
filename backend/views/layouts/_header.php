@@ -16,7 +16,7 @@ use yii\helpers\Html;
         <!-- BEGIN LOGO -->
         <div class="page-logo">
             <a href="<?= Yii::$app->urlManager->baseUrl; ?>">
-                <span class="logo-text">BIC FFYW</span>
+                <h4 class="logo-text">Park n Parcel</h4>
             </a>
 
             <div class="menu-toggler sidebar-toggler">

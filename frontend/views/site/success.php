@@ -31,9 +31,9 @@ $this->params['breadcrumbs'][] = $this->title;
                         <div class="intro">
                             <div class="intro-inner">
                                 <h3>
-                                    <span class="font-5 color-1"><?= ContestItem::getWeek()->title?></span>
+
                                 </h3>
-                                <?= ContestItem::getWeek()->description?>
+                               
                                 <div class="global-btn">
                                     <a class="global-btn-inner" href="">GALLERY</a>
                                 </div>

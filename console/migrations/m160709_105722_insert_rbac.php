@@ -14,7 +14,8 @@ class m160709_105722_insert_rbac extends Migration
         $permission->description = 'Login to backend';
         $auth->add($permission);
 
-
+        $parker = $auth->createRole('parker');
+        $auth->add($parker);
         // add "author" role and give this role the  permission
         $standard = $auth->createRole('standard-member');
         $auth->add($standard);
@@ -28,6 +29,7 @@ class m160709_105722_insert_rbac extends Migration
         // add "admin" role and give this role the "updatePost" permission
         // as well as the permissions of the "author" role
 
+        $auth->addChild($admin, $parker);
         $auth->addChild($admin, $standard);
 
         // Assign roles to users. 1 and 2 are IDs returned by IdentityInterface::getId()

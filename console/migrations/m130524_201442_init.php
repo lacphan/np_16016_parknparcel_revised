@@ -25,7 +25,6 @@ class m130524_201442_init extends NpMigration
             'password_reset_token' => $this->string()->unique(),
             'auth_key' => $this->string(32)->notNull(),
             'status' => $this->smallInteger()->notNull()->defaultValue(10),
-            'building_id' => $this->integer(),
         ], $tableOptions);
         $this->commonCreateIndex('{{%user}}', 'username');
         $this->commonCreateIndex('{{%user}}', 'email');

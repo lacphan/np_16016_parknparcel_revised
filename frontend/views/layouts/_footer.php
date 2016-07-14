@@ -13,42 +13,26 @@ use frontend\models\PageItem;
  * @var $termsConditions common\models\CommonPageItem
  */
 ?>
-<footer class="site-footer">
-    <div class="footer-inner">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 footer-logo">
-                    <img src="<?= Yii::$app->urlManager->baseUrl . '/themes/default/images/footer-logo.png'?>" alt="footer-logo">
-                </div>
-                <div class="col-md-5 footer-menu">
+<footer class="site-footer" role="contentinfo">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-menu">
+                <ul>
 
-                    <?php
-
-                    $menuItems = [
-                        ['label' => 'Press', 'url' => Yii::$app->homeUrl],
-                        ['label' => 'Term and Conditions', 'url' => Yii::$app->urlManager->createUrl([''])],
-                        ['label' => 'Privacy Policy', 'url' => Yii::$app->urlManager->createUrl([''])],
-                        ['label' => 'Contact Us', 'url' => Yii::$app->urlManager->createUrl([''])],
-                    ];
-
-
-                    echo Nav::widget([
-                        'options' => [
-                            'class' => 'menu nav navbar-nav',
-                            'id' => 'footer-menu'
-                        ],
-                        'items' => $menuItems,
-                    ]);
-                    ?>
-
-                </div>
-
-                <div class="col-md-4 footer-text">
-                    © 2016 BIC Inc. Toronto, Ontario, Canada M3N 1W2
-                </div>
+                    <li><a href="<?= Yii::$app->urlManager->createUrl(['']) ?>"><?= Yii::t('app', 'Home') ?></a></li>
+                    <li><a href="<?= Yii::$app->urlManager->createUrl(['']) ?>"><?= Yii::t('app', 'Privacy Policy') ?></a></li>
+                    <li><a href="<?= Yii::$app->urlManager->createUrl(['']) ?>"><?= Yii::t('app', 'Terms and Conditions') ?></a></li>
+                    <li><a href="<?= Yii::$app->urlManager->createUrl(['']) ?>"><?= Yii::t('app', 'Disclaimer') ?></a></li>
+                    <li><a href="<?= Yii::$app->urlManager->createUrl(['']) ?>"><?= Yii::t('app', 'Contact us') ?></a></li>
+                </ul>
             </div>
-
+            <div class="footer-social">
+                <a href="#"><img src="<?= Yii::$app->urlManager->baseUrl . '/themes/default/images/fb-icon.png'?>" alt=""></a>
+                <a href="#"><img src="<?= Yii::$app->urlManager->baseUrl . '/themes/default/images/twister-icon.png'?>" alt=""></a>
+                <a href="#"><img src="<?= Yii::$app->urlManager->baseUrl . '/themes/default/images/instagram-icon.png'?>" alt=""></a>
+               
+            </div>
+            <div class="clearfix"></div>
         </div>
-
     </div>
-</footer>
+</footer><!-- .site-footer -->

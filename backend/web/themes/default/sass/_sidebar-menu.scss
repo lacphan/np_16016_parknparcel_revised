@@ -1,0 +1,21 @@
+.page-sidebar {
+  //width: $sidebar-menu-width;
+  background-color: $site-bg-color;
+  .page-sidebar-menu {
+
+    li {
+      a {
+        color: #fff;
+        i {
+          color: #fff !important;
+        }
+      }
+      &.active ,&:hover{
+        a {
+          background-color: #464545 !important;
+          color: #fff !important;
+        }
+      }
+    }
+  }
+}

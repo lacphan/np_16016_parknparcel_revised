@@ -2,7 +2,7 @@
 
 namespace common\models\base;
 
-use Yii;
+use yii;
 
 /**
  * This is the model class for table "{{%user}}".
@@ -19,7 +19,6 @@ use Yii;
  * @property string $password_reset_token
  * @property string $auth_key
  * @property integer $status
- * @property integer $building_id
  * @property string $created_at
  * @property string $updated_at
  * @property string $published_at
@@ -29,6 +28,7 @@ use Yii;
  * @property integer $ordering_weight
  * @property string $params
  *
+ * @property BaseParkerItem[] $parkerItems
  * @property BaseUserProfile $profile
  */
 class BaseUser extends \common\enpii\components\NpActiveRecord
@@ -48,13 +48,11 @@ class BaseUser extends \common\enpii\components\NpActiveRecord
     {
         return [
             [['username', 'email', 'password_hash', 'auth_key', 'created_at', 'updated_at', 'creator_id'], 'required'],
-            [['profile_id', 'parent_id', 'level', 'status', 'building_id', 'creator_id', 'is_deleted', 'is_enabled', 'ordering_weight'], 'integer'],
+            [['profile_id', 'parent_id', 'level', 'status', 'creator_id', 'is_deleted', 'is_enabled', 'ordering_weight'], 'integer'],
             [['created_at', 'updated_at', 'published_at'], 'safe'],
             [['params'], 'string'],
             [['username', 'email', 'first_name', 'last_name', 'password_hash', 'password_reset_token'], 'string', 'max' => 255],
             [['auth_key'], 'string', 'max' => 32],
-            [['username'], 'unique'],
-            [['email'], 'unique'],
             [['password_reset_token'], 'unique']
         ];
     }
@@ -77,7 +75,6 @@ class BaseUser extends \common\enpii\components\NpActiveRecord
             'password_reset_token' => Yii::t('app', 'Password Reset Token'),
             'auth_key' => Yii::t('app', 'Auth Key'),
             'status' => Yii::t('app', 'Status'),
-            'building_id' => Yii::t('app', 'Building ID'),
             'created_at' => Yii::t('app', 'Created At'),
             'updated_at' => Yii::t('app', 'Updated At'),
             'published_at' => Yii::t('app', 'Published At'),
@@ -87,6 +84,14 @@ class BaseUser extends \common\enpii\components\NpActiveRecord
             'ordering_weight' => Yii::t('app', 'Ordering Weight'),
             'params' => Yii::t('app', 'Params'),
         ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getParkerItems()
+    {
+        return $this->hasMany(BaseParkerItem::className(), ['user_id' => 'id']);
     }
 
     /**

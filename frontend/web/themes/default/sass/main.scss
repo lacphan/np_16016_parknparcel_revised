@@ -1,7 +1,13 @@
-// Only use font if using internal font, other wise, put it there for auto-complete
-@import "site_general";
+@import "functions";
+@import "devices";
+@import "horizontal-resp-nav-menu";
+@import "site_global";
 @import "site_header";
 @import "site_footer";
-@import "site-home";
-@import "site-register";
+@import "site_home_content";
+@import "site_faq";
+@import "site_contact";
+@import "site_login";
+@import "site_signup";
+@import "site_user-order";
 

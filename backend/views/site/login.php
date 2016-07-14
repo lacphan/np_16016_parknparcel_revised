@@ -10,73 +10,84 @@ use yii\bootstrap\ActiveForm;
 $this->title = 'Login';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+<table class="table-login">
+    <tr>
+        <td>
 
-<!-- BEGIN LOGIN -->
-<div class="content">
-    <!-- BEGIN LOGIN FORM -->
-    <?php $form = ActiveForm::begin([
-        'id' => 'login-form',
-        'options' => [
-            'class' => 'login-form'
-        ],
-    ]); ?>
-    <h3 class="form-title"><?= Html::encode($this->title) ?></h3>
-    <div class="form-group">
-        <?= $form->field($model,
-            'username',
-            [
-                'template' => "{label}\n<i class='fa fa-user'></i>\n{input}\n{hint}\n{error}",
-                'options'=>
-                    [
-                        'tag'=>'div',
-                        'class'=>'input-icon'
-                    ]
-            ]
+            <!-- BEGIN LOGIN -->
+            <div class="logo">
 
-        )->textInput(
-            [
-                'class' => 'form-control placeholder-no-fix',
-                'placeholder' => 'Username'
-            ]
-        )->label(false);
-        ?>
-    </div>
-    <div class="form-group">
-        <?= $form->field($model,
-            'password',
-            [
-                'template' => "{label}\n<i class='fa fa-lock'></i>\n{input}\n{hint}\n{error}",
-                'options'=>
-                    [
-                        'tag'=>'div',
-                        'class'=>'input-icon'
-                    ]
-            ]
-        )->passwordInput(
-            [
-                'class' => 'form-control placeholder-no-fix',
-                'placeholder' => 'Password'
-            ]
-        )->label(false);
-        ?>
-    </div>
-    <div class="form-actions">
-        <?= $form->field($model, 'rememberMe',
-            [
-                'template' => '',
-                'options'=>
-                    [
-                        'tag'=>'label',
-                        'class'=>'checkbox'
-                    ]
-            ])->checkbox(['template' => '{input}{label}{error}']) ?>
+                <img src="<?= Yii::$app->urlManager->baseUrl . '/themes/default/images/login-logo.png' ?>" alt="logo"
+                     width="182" height="87">
+            </div>
+            <div class="content">
+                <!-- BEGIN LOGIN FORM -->
+                <?php $form = ActiveForm::begin([
+                    'id' => 'login-form',
+                    'options' => [
+                        'class' => 'login-form'
+                    ],
+                ]); ?>
+                <h3 class="form-title"><?= Html::encode($this->title) ?></h3>
+                <div class="form-group">
+                    <?= $form->field($model,
+                        'username',
+                        [
+                            'template' => "{label}\n<i class='fa fa-user'></i>\n{input}\n{hint}\n{error}",
+                            'options' =>
+                                [
+                                    'tag' => 'div',
+                                    'class' => 'input-icon'
+                                ]
+                        ]
 
-        <?= Html::submitButton('Login <i class="m-icon-swapright m-icon-white"></i>', ['class' => 'btn blue pull-right', 'name' => 'login-button']) ?>
+                    )->textInput(
+                        [
+                            'class' => 'form-control placeholder-no-fix',
+                            'placeholder' => 'Username'
+                        ]
+                    )->label(false);
+                    ?>
+                </div>
+                <div class="form-group">
+                    <?= $form->field($model,
+                        'password',
+                        [
+                            'template' => "{label}\n<i class='fa fa-lock'></i>\n{input}\n{hint}\n{error}",
+                            'options' =>
+                                [
+                                    'tag' => 'div',
+                                    'class' => 'input-icon'
+                                ]
+                        ]
+                    )->passwordInput(
+                        [
+                            'class' => 'form-control placeholder-no-fix',
+                            'placeholder' => 'Password'
+                        ]
+                    )->label(false);
+                    ?>
+                </div>
+                <div class="form-actions">
+                    <?= $form->field($model, 'rememberMe',
+                        [
+                            'template' => '',
+                            'options' =>
+                                [
+                                    'tag' => 'label',
+                                    'class' => 'checkbox'
+                                ]
+                        ])->checkbox(['template' => '{input}{label}{error}']) ?>
 
-    </div>
+                    <?= Html::submitButton('Login <i class="m-icon-swapright m-icon-white"></i>', ['class' => 'btn blue pull-right', 'name' => 'login-button']) ?>
+
+                </div>
 
 
-    <?php ActiveForm::end(); ?>
+                <?php ActiveForm::end(); ?>
 
-</div>
-<!-- END LOGIN -->
+            </div>
+            <!-- END LOGIN -->
+        </td>
+    </tr>
+</table>

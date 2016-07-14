@@ -1,60 +1,67 @@
-.site-footer{
-  .footer-inner {
-    @include respond-to-custom-size($mobile-break-point) {
-      background-color: #f8a421;
-      margin-bottom: 70px;
+.site-footer {
+  .footer-content {
+    padding: 17px 0 23px;
+    border-top: solid 1px #e4e4e4;
+    .footer-menu {
+      float: left;
+      margin-top: 8px;
+      @include respond-to-custom-size(null, 768px){
+        float: none;
+      }
+      ul {
+        padding: 0;
+        list-style-type: none;
+        @include respond-to-custom-size(null, 400px){
+          text-align: center;
+        }
+        li {
+          display: inline-block;
+          font-family: Lato;
+          color: #999999;
+          position: relative;
+          a {
+            padding: 10px 5px;
+            color: #999999;
+            @include rem-fallback('font-size', 1.3);
+            &:hover {
+              text-decoration: none;
+              color: #008eaa;
+            }
+          }
+          &:after {
+            content: '|';
+            position: absolute;
+            top: 0;
+            right: -4px;
+          }
+          &:first-child{
+            a{
+              padding-left: 0;
+            }
+          }
+          &:last-child:after {
+            display: none;
+          }
+        }
+      }
     }
-
-  }
-  .footer-logo {
-    text-align: center;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    background-color: $color3;
-    @include respond-to-custom-size($mobile-break-point) {
-      width: 29.7%;
-      text-align: left;
-      padding-bottom: 0;
-      background-color: transparent;
+    .footer-social {
+      float: right;
+      @include respond-to-custom-size(null, 768px){
+        float: none;
+        margin-top: 15px;
+      }
       img {
-        max-width: 216px;
-      }
-    }
-  }
-  #footer-menu {
-    float: none;
-    text-align: center;
-    padding-bottom: 10px;
-    padding-top: 12px;
-    li {
-      float: none;
-      display: inline-block;
-      padding-top: 12px;
-      padding-bottom: 12px;
-      a{
-        color: $color2;
-        font-size: 11px;
-        padding: 1px 13px;
-        line-height: 10px;
-        &:hover, &:focus {
-          background-color: transparent;
-        }
-      }
-      & + li {
-        a {
-          border-left: 1px solid #000;
+        width: 32px;
+        height: 32px;
+        margin-right: 3px;
+        opacity: 1;
+        transition: opacity 0.5s;
+        &:hover{
+          opacity: 0.4;
         }
       }
     }
   }
-  .footer-text {
-    font-size: 11px;
-    padding-top: 21px;
-    padding-bottom: 22px;
-    text-align: center;
-    @include respond-to-custom-size(1024px) {
-      width: 28.3%;
-      text-align: right;
-    }
-  }
+
 }
